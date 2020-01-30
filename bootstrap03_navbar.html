@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></head>
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<!--  here navbar-fixed-top  specify after scrolling down page still we will be able to see top nav bar-->
+<!--  if we add navbar-inverse it will make top navbar black  -->
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+             <div class="navbar-header">
+                <a href="http://www.tweaktalent.com/" class="navbar-brand" style="color:red;"> TTT</a>
+
+            </div>
+            <div class="container">
+            <!--<div class="navbar-header">-->
+                <!--<a href="http://www.tweaktalent.com/" class="navbar-brand" style="color:red;"> TTT</a>-->
+
+            <!--</div>-->
+<!-- for top nav bar -->
+            <ul class="nav navbar-nav">
+                <li><a href="#" style="color:blue;">  Python </a> </li>
+                <li><a href="#" style="color:blue;">AWS </a></li>
+                <li ><a href="#" style="color:blue;">Angular </a></li>
+
+            </ul>
+
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+                <!-- to use navbar we need to import above links then only boot strap work-->
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ionic</a></li>
+            <li><a href="#">React js</a></li>
+            <li><a href="#">Data warehousing</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+    <!--</div>-->
+
+
+
+            <!--<span style="float:right">+91 9700767425</span><br/>-->
+        <!-- right navbar or corner side nav -->
+            <ul class="nav navbar-nav  navbar-right" >
+                <li><a href="#"> +91 9700767425</a></li>
+                <li> <a href="#"> anil.konduru402@gmail.com</a> </li>
+            </ul>
+            </div>
+        </nav>
+
+     <div class="container">
+          <div class="jumbotron">
+              <h1> hello </h1>
+              <p>Encapsulation
+                      In an object oriented python program, you can restrict access to methods and variables. This can prevent the data from being modified by accident and is known as encapsulation.   Let’s start with an example.</p>
+              <p>encapsulation. Restricted accesss to methods or variables
+                    We create a class Car which has two methods:  drive() and updateSoftware().  When a car object is created, it will call the private methods __updateSoftware().
+
+                    This function cannot be called on the object directly, only from within the class.</p>
+              <p> Encapsulation prevents from accessing accidentally, but not intentionally.
+
+                The private attributes and methods are not really hidden, they’re renamed adding _Car” in the beginning of their name.
+
+                 The method can actually be called using redcar._Car__updateSoftware()</p>
+          </div>
+
+
+     </div>
+
+
+
+    <div class="container">
+          <div class="jumbotron">
+              <h1> hello </h1>
+              <p>
+                                </p>
+              <p>encapsulation. Restricted accesss to methods or variables
+                    We create a class Car which has two methods:  drive() and updateSoftware().  When a car object is created, it will call the private methods __updateSoftware().
+
+                 Private variables
+                encapsulation-exampleClass with private variables
+                Variables can be private which can be useful on many occasions. A private variable can only be changed within a class method and not outside of the class.
+
+                Objects can hold crucial data for your application and you do not want that data to be changeable from anywhere in the code.</p>
+
+              <p>
+
+        class Car:<br>
+
+            __maxspeed = 0<br>
+            __name = ""<br>
+
+            def __init__(self):<br>
+                self.__maxspeed = 200<br>
+                self.__name = "Supercar"<br>
+
+            def drive(self):<br>
+               print('driving. maxspeed ' + str(self.__maxspeed))<br>
+
+            def setMaxSpeed(self,speed):<br>
+                self.__maxspeed = speed<br>
+
+        redcar = Car()<br>
+        redcar.drive()<br>
+        redcar.setMaxSpeed(320)<br>
+        redcar.drive()<br>
+                                </p>
+          </div>
+
+
+     </div>
+
+
+
+
+
+
+</body>
+</html>
