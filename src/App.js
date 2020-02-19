@@ -3,67 +3,48 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  
-  const myBlog = {
-    "title" : "B L O G",
-    "description" : " testing the page passing data from object acess the data like myblogdottitle or myblogdotdescription"
-  }
+  //  creating a list and assigning  list a varible
+  const blogArr = [
+    {
+      'id' : 1,
+      'title' : 'anil',
+      'description' : 'python, django , aws, reactjs'
+    },
+    {
+      'id' : 2,
+      'title' : 'siva',
+      'description' : 'python, django '
+    },
+    {
+      'id' :3,
+      'title' : 'sukumar',
+      'description' : 'python, django, etc '
+    }
+  ]
 
-  // 111  assigning styles to varible and assign/calling these styles to th each div
-  const styles ={
-    margin : '16px',
-    padding : '16px',
-    boxSizing : 'border-box',
-    borderRadius : '5px',
-    boxShadow :'0 2px 5px #ccc'
+  //  creating a varible and mapping above list to check in console  here we have pos beside item 
+  // which tells when a item in list updated deleted or changed
+  // another way is having id and calling id instead of having a key name pos
+  const blogcard = blogArr.map( (item,pos) =>{
+    console.log(item);
 
-  }
-
+    return(
+      // here we have a key name pos which refers any change in items in list
+      // another way is calling id in key to specify changes deletions updates  key = {pos} or{item.id}
+      <div className="pageborder" key={item.id} >
+     <h3> {item.title} </h3>
+     <p> {item.description} </p>
+     <h3></h3>
+     </div>
+    )
+  }  )
 
   return (
+
     <div className="App">
-      {/* adding styles */}
-      <div style={
-        {
-          margin : '16px',
-          padding : '16px',
-          boxSizing : 'border-box',
-          borderRadius : '5px',
-          boxShadow :'0 2px 5px #ccc'
-
-        }
-      } >
-     <h3> {myBlog.title} </h3>
-     <p> {myBlog.description} </p>
-     <h3> assigning style directly in div</h3>
-     </div>
-     {/* hr  means give horizontal line  */}
-     <hr></hr>
-
-     <div style={styles}>
-     <h3> {myBlog.title} </h3>
-     <p> {myBlog.description} </p>
-     <h3>asssigning style to a varible and callign that varible and assigning to style in div</h3>
-     </div>
-     <hr></hr>
-
-     <div style={styles}>
-     <h3> {myBlog.title} </h3>
-     <p> {myBlog.description} </p>
-     </div>
-     <hr></hr>
-
-
-
-{/* how to call css style from another file like appp dot css */}
-<div class="pageborder">
-    <h3> {myBlog.title} </h3>
-     <p> {myBlog.description} </p>
-     <h3> created a class for div and in app dot css file we are creating a style how to border particular class</h3>
-</div>
-
-
-
+     {/* calling a varible which have list iterating  function  */}
+    {blogcard}
+         
     </div>
     
   );
