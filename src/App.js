@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import BlogCard from './BlogCard';
 import './App.css';
 
 function App() {
@@ -31,11 +32,12 @@ function App() {
     return(
       // here we have a key name pos which refers any change in items in list
       // another way is calling id in key to specify changes deletions updates  key = {pos} or{item.id}
-      <div className="pageborder" key={item.id} >
-     <h3> {item.title} </h3>
-     <p> {item.description} </p>
-     <h3></h3>
-     </div>
+    //   <div className="pageborder" key={item.id} >
+    //  <h3> {item.title} </h3>
+    //  <p> {item.description} </p>
+    //  <h3></h3>
+    //  </div>
+    <BlogCard key={pos} />     // imported a dotjs file calling the component varible
     )
   }  )
 
