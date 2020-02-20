@@ -43,7 +43,7 @@ function App() {
     //  in above line we are calling component blog card  and passing hard code data to test 
 
 
-    <BlogCard key={pos} title={item.title} description={item.description} /> 
+    <BlogCard key={pos} title={item.title} description={item.description}  id = {item.id}/> 
     )
   }  )
 
