@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import BlogCard from './BlogCard';
 import './App.css';
 
@@ -27,7 +27,7 @@ function App() {
   // which tells when a item in list updated deleted or changed
   // another way is having id and calling id instead of having a key name pos
   const blogcard = blogArr.map( (item,pos) =>{
-    console.log(item);
+    // console.log(item);
 
     return(
       // here we have a key name pos which refers any change in items in list
@@ -37,7 +37,13 @@ function App() {
     //  <p> {item.description} </p>
     //  <h3></h3>
     //  </div>
-    <BlogCard key={pos} />     // imported a dotjs file calling the component varible
+
+
+    // <BlogCard key={pos} title='anil nnn' description='testimg data is passing or not' />     // imported a dotjs file calling the component varible
+    //  in above line we are calling component blog card  and passing hard code data to test 
+
+
+    <BlogCard key={pos} title={item.title} description={item.description} /> 
     )
   }  )
 
